@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Missions from './Missions';
 import MyProfile from './MyProfile';
 import Navbar from '../components/Navbar';
+import Rocket from '../components/RockestsLaylo';
 
 const Rockets = () => (
   <>
@@ -11,6 +12,7 @@ const Rockets = () => (
       <Route exact path="/">
         <div>
           <h3>I am in Rockets page</h3>
+          <Rocket />
         </div>
       </Route>
       <Route path="/missions">
