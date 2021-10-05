@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import planet from '../media/planet.png';
 
 const Navbar = () => {
   const links = [
@@ -23,14 +24,22 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-light bg-light">
-      <div className="container-fluid">
-        <h1 className="navbar-brand">
-          Navbar
-        </h1>
-        <ul className="d-flex">
+      <div className="container border-bottom pt-2 pb-3 border-3">
+        <div className="d-flex align-items-center justify-content-center">
+          <img src={planet} alt="planet" width="75" />
+          <h1 className="navbar-brand fs-2 ms-3">
+            Space Travelers&apos; Hub
+          </h1>
+        </div>
+        <ul className="d-flex mb-0">
           {links.map((link) => (
-            <li key={link.id}>
-              <NavLink to={link.path} activeClassName="active-link" exact>
+            <li key={link.id} id={link.id} className="li-Nav-item">
+              <NavLink
+                to={link.path}
+                activeClassName="text-decoration-underline"
+                className="mx-3 text-decoration-none"
+                exact
+              >
                 {link.text}
               </NavLink>
             </li>
