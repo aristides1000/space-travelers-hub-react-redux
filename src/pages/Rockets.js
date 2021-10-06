@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Missions from './Missions';
 import MyProfile from './MyProfile';
 import Navbar from '../components/Navbar';
-import Rocket from '../components/RockestsLaylo';
+import Rocket from '../components/Rocket';
 
 const Rockets = () => (
   <>
