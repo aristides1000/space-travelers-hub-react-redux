@@ -11,8 +11,8 @@ const styles = [
     flexDirection: 'row',
     marginBottom: '1.5rem',
     alignItems: 'center',
-    padding: '2rem 1rem',
-    boxShadow: '0 0 1px 0',
+    padding: '1rem 1rem',
+    border: '0',
   },
 ];
 
