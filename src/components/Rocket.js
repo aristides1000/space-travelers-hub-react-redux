@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { Card, Button } from 'react-bootstrap';
 import planet from '../media/planet.png';
+import '../css/rocket.css';
 
 const styles = [
   {
@@ -21,7 +22,7 @@ const Rocket = () => (
       <Card.Body>
         <img className="rocket-img" src={planet} alt="planet" />
       </Card.Body>
-      <Card.Body>
+      <Card.Body className="rocket-info">
         <Card.Title>Falcon 1</Card.Title>
         <Card.Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
