@@ -26,10 +26,9 @@ export const fetchRockets = () => (dispatch) => {
       const rockets = newData.map((rocket) => ({
         id: rocket.id,
         description: rocket.description,
-        rocketName: rocket.rocketName,
-        flickrImages: rocket.flickrImages[0],
+        rocketName: rocket.rocket_name,
+        flickrImages: rocket.flickr_images[0],
       }));
-      console.log(rockets);
       dispatch(getRocketSuccess(rockets));
     })
     .catch((error) => {

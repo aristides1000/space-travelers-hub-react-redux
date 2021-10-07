@@ -1,9 +1,6 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
-import planet from '../media/planet.png';
 import '../css/rocket.css';
 
 const styles = [
@@ -27,8 +24,8 @@ const Rocket = (props) => {
   return (
     <div className="rocket-container" id={id}>
       <Card style={styles[0]}>
-        <Card.Body>
-          <img className="rocket-img" src={planet} alt="planet" />
+        <Card.Body style={{ flex: '0' }}>
+          <img className="rocket-img" src={flickrImages} alt="planet" />
         </Card.Body>
         <Card.Body className="rocket-info">
           <Card.Title>{rocketName}</Card.Title>
@@ -40,10 +37,10 @@ const Rocket = (props) => {
   );
 };
 
-export default Rocket;
-
 Rocket.propTypes = {
   flickrImages: PropTypes.any,
   rocketName: PropTypes.any,
   description: PropTypes.any,
 }.isRequired;
+
+export default Rocket;
