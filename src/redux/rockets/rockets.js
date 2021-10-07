@@ -3,6 +3,7 @@ import axios from 'axios';
 const GET_ROCKET_REQUEST = 'GET_ROCKET_REQUEST';
 const GET_ROCKET_SUCCESS = 'GET_ROCKET_SUCCESS';
 const GET_ROCKET_FAILURE = 'GET_ROCKET_FAILURE';
+const RESERVE_ROCKET = 'RESERVE_ROCKET';
 
 export const getRocketRequest = () => ({
   type: GET_ROCKET_REQUEST,
@@ -37,6 +38,11 @@ export const fetchRockets = () => (dispatch) => {
     });
 };
 
+export const reserveRocket = (payload) => ({
+  type: RESERVE_ROCKET,
+  payload,
+});
+
 export const initialState = {
   loading: false,
   rockets: [],
@@ -61,6 +67,15 @@ const rocketsReducer = (state = initialState, action) => {
         loading: false,
         rockets: [],
         error: action.payload,
+      };
+
+    case RESERVE_ROCKET:
+      return {
+        ...state,
+        rockets: state.rockets.map((rocket) => {
+          if (rocket.id !== action.payload.id) { return rocket; }
+          return { ...rocket, reserved: true };
+        }),
       };
 
     default:
