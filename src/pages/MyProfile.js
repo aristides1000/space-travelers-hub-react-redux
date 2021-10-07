@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const MyProfile = ({ missions }) => {
+const MyProfile = ({ missions, rocket }) => {
   const getReseveredItems = (store) => store.filter((element) => element.reserved === true);
   return (
     <div className="container-fluid">
@@ -19,7 +19,14 @@ const MyProfile = ({ missions }) => {
             <div className="col-6">
               <h3>My Rockets</h3>
               <ul className="list-group">
-                <li className="list-group-item pb-4 fs-5">An item</li>
+                {getReseveredItems(rocket).map((element) => (
+                  <li
+                    className="list-group-item pb-4 fs-5"
+                    key={element.rocketName}
+                  >
+                    {element.rocketName}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

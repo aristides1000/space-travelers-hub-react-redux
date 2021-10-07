@@ -66,7 +66,7 @@ const Rocket = (props) => {
           <Card.Title>{rocketName}</Card.Title>
           <Card.Text>
             <ReserveBadge reserved={reserved} />
-            { ' ' }
+            { ' '}
             {description}
           </Card.Text>
           <ReserveButton
