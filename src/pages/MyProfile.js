@@ -36,7 +36,4 @@ const MyProfile = ({ missions, rocket }) => {
   );
 };
 
-// Profile.propTypes = {
-//   missions: Proptypes.shape({}).isRequired,
-// };
 export default MyProfile;
