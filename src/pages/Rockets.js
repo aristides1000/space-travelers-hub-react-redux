@@ -1,11 +1,9 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Missions from './Missions';
 import MyProfile from './MyProfile';
 import Navbar from '../components/Navbar';
-import Rocket from '../components/Rocket';
 import RocketsList from '../components/RocketsList';
 
 function Rockets() {
