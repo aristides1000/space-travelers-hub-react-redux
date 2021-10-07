@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://suspicious-einstein-3746cf.netlify.app/)
+[Live Demo Link](https://pedantic-villani-10de7b.netlify.app)
 
 ## Getting Started
 1. Clone this repo on your local machine
@@ -45,8 +45,7 @@ To make this repository working in your local machine you need only a browser.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/aristides1000/bookstore-react-redux/issues).
-
+Feel free to check the [issues page](https://github.com/aristides1000/space-travelers-hub-react-redux/issues).
 
 ## Show your support
 
