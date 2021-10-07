@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Card, Button } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
-import { reserveRocket } from '../redux/rockets/rockets';
+import { reserveRocket, cancelRocket } from '../redux/rockets/rockets';
 import '../css/rocket.css';
 
 const styles = [
@@ -17,11 +18,19 @@ const styles = [
   },
 ];
 
+const ReserveButton = (props) => {
+  const { reserved, reserveRocket, cancelRocket } = props;
+
+  if (reserved) {
+    return <Button onClick={cancelRocket} variant="light">Cancel Reservation</Button>;
+  }
+  return <Button onClick={reserveRocket} variant="primary">Reserve Rocket</Button>;
+};
 const Rocket = (props) => {
   const { rocket } = props;
 
   const {
-    id, rocketName, description, flickrImages,
+    id, rocketName, description, flickrImages, reserved,
   } = rocket;
 
   const dispatch = useDispatch();
@@ -30,7 +39,12 @@ const Rocket = (props) => {
     dispatch(reserveRocket({
       id,
     }));
-    console.log(id);
+  };
+
+  const cancelReservation = () => {
+    dispatch(cancelRocket({
+      id,
+    }));
   };
 
   return (
@@ -42,7 +56,11 @@ const Rocket = (props) => {
         <Card.Body className="rocket-info">
           <Card.Title>{rocketName}</Card.Title>
           <Card.Text>{description}</Card.Text>
-          <Button variant="primary" onClick={reserveUpdate}>Reserve Rocket</Button>
+          <ReserveButton
+            reserved={reserved}
+            reserveRocket={reserveUpdate}
+            cancelRocket={cancelReservation}
+          />
         </Card.Body>
       </Card>
     </div>
