@@ -19,9 +19,7 @@ function Rockets() {
           <RocketsList />
         </Route>
         <Route path="/missions" exact render={() => <Missions store={missionReducer} />} />
-        <Route path="/my-profile">
-          <MyProfile />
-        </Route>
+        <Route path="/my-profile" render={() => <MyProfile missions={missionReducer} />} />
       </Switch>
     </>
   );
