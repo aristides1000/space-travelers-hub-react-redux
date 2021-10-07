@@ -6,3 +6,12 @@
 .rocket-info {
   padding: 0 30px;
 }
+
+.rocket-reserve {
+  background-color: rgb(24, 162, 184);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-size: 14px;
+}
