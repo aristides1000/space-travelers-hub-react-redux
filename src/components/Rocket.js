@@ -26,6 +26,15 @@ const ReserveButton = (props) => {
   }
   return <Button onClick={reserveRocket} variant="primary">Reserve Rocket</Button>;
 };
+
+const ReserveBadge = (props) => {
+  const { reserved } = props;
+
+  if (reserved) {
+    return <span><button type="button" className="rocket-reserve">Reserved</button></span>;
+  }
+  return <span />;
+};
 const Rocket = (props) => {
   const { rocket } = props;
 
@@ -55,7 +64,11 @@ const Rocket = (props) => {
         </Card.Body>
         <Card.Body className="rocket-info">
           <Card.Title>{rocketName}</Card.Title>
-          <Card.Text>{description}</Card.Text>
+          <Card.Text>
+            <ReserveBadge reserved={reserved} />
+            { ' ' }
+            {description}
+          </Card.Text>
           <ReserveButton
             reserved={reserved}
             reserveRocket={reserveUpdate}
