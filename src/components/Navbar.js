@@ -23,7 +23,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-light">
       <div className="container border-bottom pt-2 pb-3 border-3">
         <div className="d-flex align-items-center justify-content-center">
           <img src={planet} alt="planet" width="75" />
