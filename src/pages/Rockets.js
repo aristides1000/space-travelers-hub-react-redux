@@ -8,6 +8,7 @@ import RocketsList from '../components/RocketsList';
 
 function Rockets() {
   const { missionReducer } = useSelector((state) => state);
+  const allRockets = useSelector((state) => state.rockets.rockets);
 
   return (
     <>
@@ -17,7 +18,7 @@ function Rockets() {
           <RocketsList />
         </Route>
         <Route path="/missions" exact render={() => <Missions store={missionReducer} />} />
-        <Route path="/my-profile" render={() => <MyProfile missions={missionReducer} />} />
+        <Route path="/my-profile" render={() => <MyProfile missions={missionReducer} rocket={allRockets} />} />
       </Switch>
     </>
   );
