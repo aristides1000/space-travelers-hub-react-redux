@@ -1,9 +1,9 @@
 # Space Travelers' Bub React-Redux Project
 
 > This is a React project where a user can observe information about rockets and space travel, this application was made with React and Redux.
-![screenshot1](../screenshots/Screenshot_2.png)
-![screenshot2](../screenshots/Screenshot_3.png)
-![screenshot3](../screenshots/Screenshot_4.png)
+![screenshot1](./screenshots/Screenshot_2.png)
+![screenshot2](./screenshots/Screenshot_3.png)
+![screenshot3](./screenshots/Screenshot_4.png)
 
 ## Built With
 
